@@ -18,7 +18,7 @@ class ProductManager extends StatefulWidget {
 }
 
 class _ProductManager extends State<ProductManager> {
-  final List<String> _products = [];
+  List<String> _products = [];
 
   @override
   void initState() {
