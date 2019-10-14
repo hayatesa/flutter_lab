@@ -1,5 +1,20 @@
-import 'package:first_flutter_app/text/text_output.dart';
 import 'package:flutter/material.dart';
+
+main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Assigment 1'),
+          ),
+          body: TextControl()
+      ),
+    );
+  }
+}
 
 class TextControl extends StatefulWidget {
   @override
@@ -26,6 +41,18 @@ class _TextControlState extends State<TextControl> {
         TextOutput(_text)
       ],
     );
+  }
+
+}
+
+class TextOutput extends StatelessWidget {
+  final String text;
+
+  TextOutput(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(text);
   }
 
 }
